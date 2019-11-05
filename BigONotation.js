@@ -81,3 +81,41 @@ function naiveSearch(array, item) {
 
 //Answer: O(n)
 //Explanation: Runs to see if all or any item will be equal to the item stated
+
+// 6. Creating pairs:
+// What is the Big O of the following algorithm? Explain your answer
+
+function createPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+      for(let j = i + 1; j < arr.length; j++) {
+          console.log(arr[i] + ", " +  arr[j] );
+      }
+  }
+}
+
+// Answer: O(n^2)
+// Explanation: There is a nested loop thus for each item in the first array, it must iterate through the second loop to pair each item in arr[j].
+
+// 7. Compute the sequence
+// What does the following algorithm do? What is its runtime complexity? Explain your answer
+
+function compute(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+
+      if (i === 1) {
+          result.push(0);
+      }
+      else if (i == 2) {
+          result.push(1);
+      }
+      else {
+          result.push(result[i - 2] + result[i - 3]);
+      }
+  }
+  return result;
+}
+
+// Answer: O(n)
+// Explanation: Although this has multiple conditionals, it still performs the same check and through each item iterating through the array once.
+
