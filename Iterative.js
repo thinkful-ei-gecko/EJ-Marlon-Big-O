@@ -54,3 +54,49 @@ function nthTriangle(number){
 
 }
 
+function stringsplit(str, separator){
+  let currentString = '';
+  let array = [];
+
+  for (let i = 0; i <= str.length - 1; i++){
+    if (str[i] !== separator){
+      currentString += str[i];
+    }
+    else if (str[i] === separator){
+      array.push(currentString);
+      currentString = '';
+    }
+    if (i === str.length - 1){
+      array.push(currentString);
+    }
+  }
+  
+  return array;
+}
+
+function fibonacci(num) {
+  let fibArray = [0, 1];
+
+  for (let i = 2; i < num + 1; i++){
+    fibArray.push(fibArray[i-2] + fibArray[i-1]);
+    console.log('line 82', fibArray[i - 2]);
+    console.log(fibArray[i - 1]);
+  }
+
+  return fibArray[fibArray.length-1];
+}
+
+function factorial(num){
+  let total = num;
+  for (let i = 1; i < num; i++){
+    if(num === 0 || num === 1){
+      total = 1;
+    }
+    total *= i;
+  }
+
+  return total;
+}
+
+
+
