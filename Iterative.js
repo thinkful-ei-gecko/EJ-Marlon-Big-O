@@ -25,3 +25,32 @@ function powerCalculator(num, exponent){
   }
   return total;
 }
+
+function reverse(str){
+  let array = []
+  
+  for (let i = str.length - 1; i >= 0; i--){
+    array.push(str[i])
+  }
+
+  return array.join('')
+}
+
+function nthTriangle(number){
+
+  let total = 1
+
+  for (let i = 0; i < number; i++){
+
+    if (i === 1){
+      total = 1
+    }
+
+    total += i + 1
+
+  }
+
+  return total;
+
+}
+
