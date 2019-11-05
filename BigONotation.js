@@ -52,3 +52,32 @@ function areYouHere(arr1, arr2) {
 // Answer: O(n^2)
 // Explanation: For this function the loop has iterate through the entirety of the nested loop giving it n squared time.
 
+
+
+// 4. Doubler
+// What is the Big O of the following algorithm? Explain your answer
+
+function doubleArrayValues(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] *= 2;
+    }
+    return array;
+}
+
+//Answer: O(n)
+//Explanation: Iterates through the array and hits every item once
+
+
+// 5. Naive search
+// What is the Big O of the following algorithm? Explain your answer
+
+function naiveSearch(array, item) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === item) {
+            return i;
+        }
+    }
+}
+
+//Answer: O(n)
+//Explanation: Runs to see if all or any item will be equal to the item stated
