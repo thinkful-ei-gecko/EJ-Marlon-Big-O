@@ -117,5 +117,54 @@ function compute(num) {
 }
 
 // Answer: O(n)
-// Explanation: Although this has multiple conditionals, it still performs the same check and through each item iterating through the array once.
+// Function: Will iterate through (num) of times of sequence and then pushing number into result array
+// Explanation: Function takes (num) as param then since there is a for loop it has to iterate through each number making it a (n)
+
+
+
+// 8. An efficient search
+// In this example, we return to the problem of searching using a more sophisticated approach 
+// than in naive search, above. Assume that the input array is always sorted. What is the Big O 
+// of the following algorithm? Explain your answer
+
+function efficientSearch(array, item) {
+    let minIndex = 0;
+    let maxIndex = array.length - 1;
+    let currentIndex;
+    let currentElement;
+
+    while (minIndex <= maxIndex) {
+        currentIndex = Math.floor((minIndex + maxIndex) / 2);
+        currentElement = array[currentIndex];
+
+        if (currentElement < item) {
+            minIndex = currentIndex + 1;
+        }
+        else if (currentElement > item) {
+            maxIndex = currentIndex - 1;
+        }
+        else {
+            return currentIndex;
+        }
+    }
+    return -1;
+}
+
+//Answer: O(log(n))
+//Explanation: Since the function starts the search from the middle going outwards (left or right), it makes it a log(n)
+//             based on the condition.
+
+
+// 9. Random element
+// What is the Big O of the following algorithm? Explain your answer
+
+
+function findRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+
+//Answer: O(1)
+//Explanation: Although multiple items in array, it only selects one RANDOM number so it will have the same operational time. Will have the same time
+//             result everytime.
 
