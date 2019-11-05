@@ -21,3 +21,34 @@
 
 //Explanation: Directly proportional to how many people the person is asking
 
+// 2) What is the Big O of the following algorithm? Explain your answer
+
+function isEven(value) {
+  if (value % 2 == 0) {
+      return true;
+  }
+  else
+      return false;
+  }
+}
+
+// Answer: O(1)
+// Explanation: The function only takes one input and performs the same operation thus takes constant time.
+
+// 3. Are you here?
+// What is the Big O of the following algorithm? Explain your answer
+
+function areYouHere(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+      const el1 = arr1[i];
+      for (let j = 0; j < arr2.length; j++) {
+          const el2 = arr2[j];
+          if (el1 === el2) return true;
+      }
+  }
+  return false;
+}
+
+// Answer: O(n^2)
+// Explanation: For this function the loop has iterate through the entirety of the nested loop giving it n squared time.
+
